@@ -1,0 +1,33 @@
+{
+  "name": "@example/portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint:script": "eslint src --ext ts,vue,astro",
+    "lint:style": "stylelint **/*.{vue,css}",
+    "format": "prettier -w -u ."
+  },
+  "dependencies": {
+    "@astrojs/vue": "^1.1.0",
+    "astro": "^1.5.0",
+    "vue": "^3.2.30"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-astro": "^0.20.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "prettier": "^2.4.1",
+    "vite-plugin-eslint": "^1.8.1"
+  }
+}

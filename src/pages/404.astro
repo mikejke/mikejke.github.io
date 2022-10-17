@@ -1,0 +1,26 @@
+---
+import MainHead from '../components/main-head.vue';
+import Footer from '../components/base-footer.vue';
+import Nav from '../components/base-nav.vue';
+
+---
+
+<html lang="en">
+	<head>
+		<MainHead title="Not Found"  generator={Astro.generator} />
+		<style>
+			.wrapper {
+				margin-top: 2em;
+				margin-bottom: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<Nav />
+		<div class="wrapper">
+			<h1>Page Not Found</h1>
+			<p>Not found</p>
+		</div>
+		<Footer />
+	</body>
+</html>

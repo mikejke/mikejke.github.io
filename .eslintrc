@@ -1,0 +1,50 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "plugin:astro/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "@vue/prettier",
+    "@vue/prettier/@typescript-eslint"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
+    "extraFileExtensions": [".astro", ".vue"]
+  },
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "parser": "vue-eslint-parser",
+      "plugins": ["vue", "@typescript-eslint"],
+      "rules": {
+        "vue/max-attributes-per-line": "off",
+        "vue/singleline-html-element-content-newline": "off"
+      },
+      "globals": {
+        "defineProps": "readonly",
+        "withDefaults": "readonly"
+      }
+    },
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "plugins": ["astro", "@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "prettier/prettier": "off",
+        "no-console": "error"
+      }
+    }
+  ]
+}
